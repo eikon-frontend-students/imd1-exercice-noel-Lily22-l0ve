@@ -1,0 +1,40 @@
+ {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #d73d3d, #ebbdaf);
+  animation: pulse 5s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(40deg);
+  }
+}
+
+#goofy {
+  width: 545px;
+  transition: transform 0.25s ease, filter 0.2s ease;
+}
+
+#goofy:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 20px rgb(252, 255, 165));
+}
